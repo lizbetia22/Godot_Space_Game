@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw24rmdhp0pu8"]
+
+[ext_resource type="PackedScene" uid="uid://bgfwpptly437o" path="res://models/items/Pickup_Crate.gltf" id="1_6iqy1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_igrhh"]
+size = Vector3(0.929199, 0.862305, 1)
+
+[node name="Pickup_Crate2" instance=ExtResource("1_6iqy1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pickup_Crate" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickup_Crate/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0354004, 0.0354679, 0)
+shape = SubResource("BoxShape3D_igrhh")

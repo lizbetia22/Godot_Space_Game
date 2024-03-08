@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://t506qxbxg3qe"]
+
+[ext_resource type="Texture2D" uid="uid://cobm81sgb2n4j" path="res://assets/img/panorama_image_space.png" id="1_rsjpr"]
+[ext_resource type="PackedScene" uid="uid://b2nh7lywq2nxw" path="res://scenes/room.tscn" id="3_m6r8q"]
+[ext_resource type="Script" path="res://lib/spawn_point.gd" id="3_recqb"]
+[ext_resource type="FontFile" uid="uid://5wo7y4exg3md" path="res://assets/fonts/speed-rush-font/SpeedrushRegular-qZWp6.otf" id="4_gajmr"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_21spo"]
+panorama = ExtResource("1_rsjpr")
+
+[sub_resource type="Sky" id="Sky_l04n5"]
+sky_material = SubResource("PanoramaSkyMaterial_21spo")
+
+[sub_resource type="Environment" id="Environment_0l765"]
+background_mode = 2
+sky = SubResource("Sky_l04n5")
+tonemap_mode = 2
+
+[node name="Level_2" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 1.14569, -2.3915)
+light_color = Color(0.909804, 1, 1, 1)
+shadow_enabled = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(0.972312, -0.0728244, -0.22205, 0.155888, 0.910015, 0.38415, 0.174093, -0.408129, 0.896171, -6.95646, 13.3452, -0.983162)
+spot_range = 48.883
+spot_angle = 171.35
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0l765")
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49627, 3.97701, 12.272)
+script = ExtResource("3_recqb")
+key = "level_1"
+
+[node name="SpawnDeafult" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772408, 2.32486, 13.2631)
+script = ExtResource("3_recqb")
+
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="Room" parent="." instance=ExtResource("3_m6r8q")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.74168, 0, 11.8903)
+
+[node name="top" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.654689, 6.98911, 12.2255)
+use_collision = true
+size = Vector3(12, 0.1, 20)
+
+[node name="Info" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.533333, 0.686275, 1, 1)
+theme_override_fonts/font = ExtResource("4_gajmr")
+theme_override_font_sizes/font_size = 60
+text = "Congratulations!
+You won this game"

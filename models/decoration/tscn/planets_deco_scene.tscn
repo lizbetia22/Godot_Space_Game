@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dutkusgvicufv"]
+
+[ext_resource type="PackedScene" uid="uid://5j3sxyehwcsc" path="res://models/decoration/planets_deco/scene.gltf" id="1_21d4u"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_21d4u")]
+
+[node name="Sphere_001" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle" index="0"]
+transform = Transform3D(0.0669074, 0.00228318, 6.11739e-26, -0.00228318, 0.0669074, 3.30856e-24, 5.16988e-26, -3.30872e-24, 0.0669463, 0.995299, -0.0322394, 0)
+
+[node name="Sphere_002" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_001" index="0"]
+transform = Transform3D(0.0661402, 0.00154395, -1.30766e-26, -0.00154395, 0.0661402, 1.65512e-24, 5.16988e-26, -1.65436e-24, 0.0661582, 0.995255, -0.0219867, 4.1359e-25)
+
+[node name="Sphere_003" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_002" index="0"]
+transform = Transform3D(0.0545372, 0.000823858, 0, -0.000823858, 0.0545372, 0, 0, 0, 0.0545435, 0.992593, -0.014117, 0)
+
+[node name="Sphere_004" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_003" index="0"]
+transform = Transform3D(0.0436178, 0.000458205, -1.2924e-26, -0.000458205, 0.0436178, 1.35767e-28, 1.29247e-26, 2.52028e-35, 0.0436202, 0.996331, -0.00983473, -4.1359e-25)
+
+[node name="Sphere_005" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_004" index="0"]
+transform = Transform3D(0.104565, 0.00191516, 5.16901e-26, -0.00191516, 0.104565, -9.46725e-28, -5.16988e-26, 1.61136e-34, 0.104583, 0.989181, -0.0170999, 4.1359e-25)
+
+[node name="Sphere_006" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_005" index="0"]
+transform = Transform3D(0.0557521, 0.00123636, 1.08351e-26, -0.00123636, 0.0557521, 1.65453e-24, 2.58494e-26, -1.65436e-24, 0.0557658, 0.99483, -0.0208592, -4.1359e-25)
+
+[node name="Sphere_007" parent="Sketchfab_model/f7d7ec61aff1410387191b3cddc10baa_fbx/Object_2/RootNode/BezierCircle_006" index="0"]
+transform = Transform3D(0.022229, 0.000323215, -1.9385e-26, -0.000323215, 0.022229, 2.81862e-28, 1.9387e-26, 0, 0.0222314, 0.99565, -0.0136262, 0)

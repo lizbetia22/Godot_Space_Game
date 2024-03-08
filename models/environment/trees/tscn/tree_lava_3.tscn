@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt7i054nkvbls"]
+
+[ext_resource type="PackedScene" uid="uid://buxhm5g72hpey" path="res://models/environment/trees/Tree_Lava_3.gltf" id="1_kihjw"]
+
+[node name="Tree_Lava_32" instance=ExtResource("1_kihjw")]

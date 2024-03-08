@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1u1anw1p0w42"]
+
+[ext_resource type="PackedScene" uid="uid://ob357g1k4prl" path="res://models/environment/planets/Planet_3.gltf" id="1_74flv"]
+
+[node name="Planet_32" instance=ExtResource("1_74flv")]

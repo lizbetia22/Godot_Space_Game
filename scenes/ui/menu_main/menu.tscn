@@ -1,0 +1,119 @@
+[gd_scene load_steps=16 format=3 uid="uid://dojap04mkwee3"]
+
+[ext_resource type="FontFile" uid="uid://ct7q2x77xsmbu" path="res://assets/fonts/space-games-font/SpaceGames-K7zKD.otf" id="1_bb5qw"]
+[ext_resource type="FontFile" uid="uid://sp1aaxuxn55a" path="res://assets/fonts/speed-rush-font/SpeedRush-JRKVB.ttf" id="2_vj7ua"]
+[ext_resource type="FontFile" uid="uid://5wo7y4exg3md" path="res://assets/fonts/speed-rush-font/SpeedrushRegular-qZWp6.otf" id="3_fbj5i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oohwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2bscp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1paj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7kqqf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n5iwo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ucio"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_be7sm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iku2a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usu25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0u45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_habs5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5prf4"]
+
+[node name="Menu" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_bb5qw")
+theme_override_font_sizes/font_size = 60
+text = "Space adventure time"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/margin_bottom = 150
+
+[node name="Continuer" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_hover_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_focus_color = Color(0.658824, 0.356863, 0.815686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_fonts/font = ExtResource("2_vj7ua")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oohwo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2bscp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h1paj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7kqqf")
+text = "Continuer
+"
+
+[node name="New game" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_hover_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_focus_color = Color(0.658824, 0.356863, 0.815686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_fonts/font = ExtResource("3_fbj5i")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n5iwo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8ucio")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_be7sm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iku2a")
+text = "New game
+"
+
+[node name="Exit" type="Button" parent="Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_hover_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_colors/font_focus_color = Color(0.658824, 0.356863, 0.815686, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.207843, 0.596078, 0.427451, 1)
+theme_override_fonts/font = ExtResource("3_fbj5i")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_usu25")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q0u45")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_habs5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5prf4")
+text = "Exit
+"
+
+[node name="Background" type="Node3D" parent="."]

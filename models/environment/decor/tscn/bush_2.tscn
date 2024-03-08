@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://lr6vsbt082ns"]
+
+[ext_resource type="PackedScene" uid="uid://c3pigwuf7a1wc" path="res://models/environment/decor/Bush_2.gltf" id="1_qsukk"]
+
+[node name="Bush_22" instance=ExtResource("1_qsukk")]

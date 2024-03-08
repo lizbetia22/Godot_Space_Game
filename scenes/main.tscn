@@ -1,0 +1,329 @@
+[gd_scene load_steps=19 format=3 uid="uid://57skrhufru4w"]
+
+[ext_resource type="Script" path="res://lib/main.gd" id="1_bwntu"]
+[ext_resource type="PackedScene" uid="uid://brlgpnp0wo0sy" path="res://scenes/player/player.tscn" id="2_7talf"]
+[ext_resource type="FontFile" uid="uid://5wo7y4exg3md" path="res://assets/fonts/speed-rush-font/SpeedrushRegular-qZWp6.otf" id="3_f5f77"]
+[ext_resource type="Shader" path="res://lib/shaders/blur.gdshader" id="3_tyq72"]
+[ext_resource type="Texture2D" uid="uid://bj46sp8piqlhu" path="res://assets/textures/white.png" id="4_ux4mw"]
+[ext_resource type="FontFile" uid="uid://cgi5cn8wssv5" path="res://assets/fonts/speed-rush-font/SpeedrushItalic-VGnyy.otf" id="6_wnbjj"]
+[ext_resource type="Texture2D" uid="uid://bv3rxwq05emcf" path="res://assets/img/key_card.png" id="7_8l0us"]
+[ext_resource type="PackedScene" uid="uid://c2g1gfyc8r4j5" path="res://scenes/health_bar.tscn" id="8_21ork"]
+[ext_resource type="Texture2D" uid="uid://funupwcd0asv" path="res://assets/img/chest.png" id="8_551ft"]
+[ext_resource type="Texture2D" uid="uid://b1si3cfjl8i5i" path="res://assets/img/health_kit.png" id="9_1l6gu"]
+[ext_resource type="Texture2D" uid="uid://btnmrg43x1f3a" path="res://assets/img/heart_violet.png" id="9_ng3e1"]
+[ext_resource type="Texture2D" uid="uid://7m6p2w7nyofv" path="res://assets/img/jar.png" id="10_j5sjc"]
+[ext_resource type="FontFile" uid="uid://c42jn55m47va6" path="res://assets/fonts/striger-font/Striger-YzoJ8.otf" id="11_c8nad"]
+[ext_resource type="PackedScene" uid="uid://b2pfnd62ynij2" path="res://scenes/audio_stream_player_main.tscn" id="14_leteb"]
+[ext_resource type="FontFile" uid="uid://sp1aaxuxn55a" path="res://assets/fonts/speed-rush-font/SpeedRush-JRKVB.ttf" id="14_vpov7"]
+[ext_resource type="AudioStream" uid="uid://bu3nf0n45rhy6" path="res://assets/music/collect_item.wav" id="15_cq4j4"]
+[ext_resource type="AudioStream" uid="uid://c8d3ymplgpyk1" path="res://assets/music/teleport_1.wav" id="16_qx287"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oshi2"]
+shader = ExtResource("3_tyq72")
+shader_parameter/amount = 1.034
+
+[node name="Main" type="Node3D"]
+process_mode = 3
+script = ExtResource("1_bwntu")
+
+[node name="Player" parent="." instance=ExtResource("2_7talf")]
+process_mode = 1
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -3.0
+offset_right = -35.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelInfos" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_fonts/font = ExtResource("3_f5f77")
+theme_override_font_sizes/font_size = 50
+text = "Infos"
+
+[node name="Collection" type="Label" parent="HUD"]
+layout_mode = 1
+offset_left = 58.0
+offset_top = 37.0
+offset_right = 283.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0.521569, 0.678431, 1, 1)
+theme_override_fonts/font = ExtResource("3_f5f77")
+theme_override_font_sizes/font_size = 30
+text = "Items collected : "
+
+[node name="KeyCard" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 34.0
+offset_right = 625.0
+offset_bottom = 81.0
+texture = ExtResource("7_8l0us")
+expand_mode = 1
+
+[node name="Chest" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 31.0
+offset_right = 454.0
+offset_bottom = 77.0
+texture = ExtResource("8_551ft")
+expand_mode = 1
+
+[node name="Health_kit" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 32.0
+offset_right = 532.0
+offset_bottom = 82.0
+texture = ExtResource("9_1l6gu")
+expand_mode = 1
+
+[node name="Jar" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 27.0
+offset_right = 360.0
+offset_bottom = 77.0
+texture = ExtResource("10_j5sjc")
+expand_mode = 1
+
+[node name="Label_not_collected" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 35.0
+offset_right = 532.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.921569, 0.94902, 1, 1)
+theme_override_fonts/font = ExtResource("3_f5f77")
+theme_override_font_sizes/font_size = 30
+
+[node name="HealthBar" parent="HUD" instance=ExtResource("8_21ork")]
+layout_mode = 0
+offset_left = 1569.0
+offset_top = 46.0
+offset_right = 1906.0
+offset_bottom = 83.0
+step = 10.0
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+layout_mode = 0
+offset_left = 1501.0
+offset_top = 41.0
+offset_right = 1559.0
+offset_bottom = 96.0
+texture = ExtResource("9_ng3e1")
+expand_mode = 1
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Blur" type="TextureRect" parent="Menu"]
+material = SubResource("ShaderMaterial_oshi2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ux4mw")
+
+[node name="ButtonQuit" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -15.5
+offset_right = 38.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.278431, 0.580392, 0.976471, 1)
+theme_override_fonts/font = ExtResource("3_f5f77")
+theme_override_font_sizes/font_size = 40
+text = "Quit and save game"
+
+[node name="Control" type="Node2D" parent="Menu"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Menu/Control"]
+offset_left = 42.0
+offset_top = 18.0
+offset_right = 406.0
+offset_bottom = 79.0
+theme_override_fonts/normal_font = ExtResource("6_wnbjj")
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "[wave amp=80 freq=2]Items collected"
+
+[node name="KeyCard" type="TextureRect" parent="Menu/Control"]
+offset_left = 33.0
+offset_top = 96.0
+offset_right = 140.0
+offset_bottom = 179.0
+texture = ExtResource("7_8l0us")
+expand_mode = 1
+
+[node name="Chest" type="TextureRect" parent="Menu/Control"]
+offset_left = 24.0
+offset_top = 215.0
+offset_right = 147.0
+offset_bottom = 312.0
+texture = ExtResource("8_551ft")
+expand_mode = 1
+
+[node name="Health_kit" type="TextureRect" parent="Menu/Control"]
+offset_left = 22.0
+offset_top = 341.0
+offset_right = 142.0
+offset_bottom = 457.0
+texture = ExtResource("9_1l6gu")
+expand_mode = 1
+
+[node name="Jar" type="TextureRect" parent="Menu/Control"]
+offset_left = 44.0
+offset_top = 487.0
+offset_right = 131.0
+offset_bottom = 601.0
+texture = ExtResource("10_j5sjc")
+expand_mode = 1
+
+[node name="Label_Chest" type="Label" parent="Menu/Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 200.0
+offset_top = 254.0
+offset_right = 319.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_c8nad")
+theme_override_font_sizes/font_size = 25
+
+[node name="Label_Health" type="Label" parent="Menu/Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 201.0
+offset_top = 389.0
+offset_right = 320.0
+offset_bottom = 413.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_c8nad")
+theme_override_font_sizes/font_size = 25
+
+[node name="Label_jar" type="Label" parent="Menu/Control"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 531.0
+offset_right = 315.0
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_c8nad")
+theme_override_font_sizes/font_size = 25
+
+[node name="Label_key" type="Label" parent="Menu/Control"]
+offset_left = 181.0
+offset_top = 126.0
+offset_right = 348.0
+offset_bottom = 150.0
+theme_override_fonts/font = ExtResource("11_c8nad")
+theme_override_font_sizes/font_size = 25
+
+[node name="Continue" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = 59.0
+offset_right = 173.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.470588, 0.580392, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.278431, 0.580392, 0.976471, 1)
+theme_override_fonts/font = ExtResource("3_f5f77")
+theme_override_font_sizes/font_size = 40
+text = "Continue game"
+
+[node name="Label" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -933.0
+offset_top = 196.0
+offset_right = -589.0
+offset_bottom = 508.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.407843, 0, 0.560784, 1)
+theme_override_fonts/font = ExtResource("14_vpov7")
+theme_override_font_sizes/font_size = 50
+text = "Run - LB
+Take gun - X
+Shoot gun - RT
+Take object - Y
+Pause - start"
+
+[node name="Sounds" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer" parent="Sounds" instance=ExtResource("14_leteb")]
+volume_db = -3.074
+
+[node name="Collect" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("15_cq4j4")
+volume_db = 30.0
+
+[node name="teleport" type="AudioStreamPlayer3D" parent="Sounds"]
+stream = ExtResource("16_qx287")
+volume_db = -3.0
+
+[connection signal="interaction_detected" from="Player" to="." method="_on_player_interaction_detected"]
+[connection signal="interaction_detected_end" from="Player" to="." method="_on_player_interaction_detected_end"]
+[connection signal="player_dead" from="Player" to="." method="_on_player_player_dead"]
+[connection signal="pressed" from="Menu/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="Menu/Continue" to="." method="_on_continue_pressed"]

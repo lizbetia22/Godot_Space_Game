@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bog0ugvsjoo3h"]
+
+[ext_resource type="PackedScene" uid="uid://bgfwpptly437o" path="res://models/items/Pickup_Crate.gltf" id="1_8vhdu"]
+
+[node name="Pickup_Crate2" instance=ExtResource("1_8vhdu")]

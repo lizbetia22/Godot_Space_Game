@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgxrgj842tav"]
+
+[ext_resource type="PackedScene" uid="uid://ct8nk6msgn88q" path="res://models/environment/houses/House_OpenBack.gltf" id="1_4ujt7"]
+
+[node name="House_OpenBack2" instance=ExtResource("1_4ujt7")]

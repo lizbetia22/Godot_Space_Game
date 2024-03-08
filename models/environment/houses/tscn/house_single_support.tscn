@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gjxytctuj1v0"]
+
+[ext_resource type="PackedScene" uid="uid://cl5e6q4xgj17u" path="res://models/environment/houses/House_Single_Support.gltf" id="1_poq2v"]
+
+[node name="House_Single_Support2" instance=ExtResource("1_poq2v")]

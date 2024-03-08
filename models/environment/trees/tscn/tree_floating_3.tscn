@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0nmx0bqydc0i"]
+
+[ext_resource type="PackedScene" uid="uid://3pe2q6r744nq" path="res://models/environment/trees/Tree_Floating_3.gltf" id="1_122ux"]
+
+[node name="Tree_Floating_32" instance=ExtResource("1_122ux")]

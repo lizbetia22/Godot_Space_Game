@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://q4jdixoborfu"]
+
+[ext_resource type="PackedScene" uid="uid://bxhdna71xnvth" path="res://models/assets/deco_2/scene.gltf" id="1_ceb2f"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_ceb2f")]
+
+[node name="Bone_003_4" parent="Sketchfab_model/root/GLTF_SceneRootNode/Armature_12/Bone_002_11" index="0"]
+transform = Transform3D(0.912851, -0.40642, -0.0390584, 0.182257, 0.49122, -0.851755, 0.365356, 0.770407, 0.522483, 0.0977205, 2.04036, 0.0460548)
+
+[node name="Bone_004_6" parent="Sketchfab_model/root/GLTF_SceneRootNode/Armature_12/Bone_002_11" index="1"]
+transform = Transform3D(0.822767, 0.553703, 0.128326, -0.554535, 0.732474, 0.394934, 0.124681, -0.396099, 0.909703, 0.100653, 2.64847, 0.0412123)
+
+[node name="Bone_005_8" parent="Sketchfab_model/root/GLTF_SceneRootNode/Armature_12/Bone_002_11" index="2"]
+transform = Transform3D(0.846587, -0.420967, 0.325694, 0.00881138, 0.622922, 0.782234, -0.532177, -0.65936, 0.531067, 0.110819, 2.38305, 0.0398405)
+
+[node name="Bone_006_10" parent="Sketchfab_model/root/GLTF_SceneRootNode/Armature_12/Bone_002_11" index="3"]
+transform = Transform3D(0.922696, -0.168644, 0.346686, -0.131027, 0.708545, 0.693395, -0.362579, -0.685218, 0.631675, 0.0447076, 1.56106, -0.147334)

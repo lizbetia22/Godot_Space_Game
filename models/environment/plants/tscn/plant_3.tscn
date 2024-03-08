@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv5r4ydi3gnxr"]
+
+[ext_resource type="PackedScene" uid="uid://dwvdndat86xnt" path="res://models/environment/plants/Plant_3.gltf" id="1_wchuc"]
+
+[node name="Plant_32" instance=ExtResource("1_wchuc")]

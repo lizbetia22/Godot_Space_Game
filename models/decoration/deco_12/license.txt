@@ -1,0 +1,11 @@
+Model Information:
+* title:	Blue Sun Space station
+* source:	https://sketchfab.com/3d-models/blue-sun-space-station-1262a9ac4a42401993faf8aaec7f9a4b
+* author:	whitejackal (https://sketchfab.com/whitejackal)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Blue Sun Space station" (https://sketchfab.com/3d-models/blue-sun-space-station-1262a9ac4a42401993faf8aaec7f9a4b) by whitejackal (https://sketchfab.com/whitejackal) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

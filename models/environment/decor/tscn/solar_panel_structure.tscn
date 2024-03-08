@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbqx3admlitw"]
+
+[ext_resource type="PackedScene" uid="uid://do1shypygppmx" path="res://models/environment/decor/SolarPanel_Structure.gltf" id="1_aswbv"]
+
+[node name="SolarPanel_Structure2" instance=ExtResource("1_aswbv")]

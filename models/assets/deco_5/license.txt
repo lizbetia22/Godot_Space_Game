@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci fi corridor
+* source:	https://sketchfab.com/3d-models/sci-fi-corridor-d4d45b53394c4cc5857961894127f431
+* author:	ArcheoteryxFr (https://sketchfab.com/Archeopteryxfr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci fi corridor" (https://sketchfab.com/3d-models/sci-fi-corridor-d4d45b53394c4cc5857961894127f431) by ArcheoteryxFr (https://sketchfab.com/Archeopteryxfr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

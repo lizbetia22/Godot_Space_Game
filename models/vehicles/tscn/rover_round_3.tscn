@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://hksh1r23p2fl"]
+
+[ext_resource type="PackedScene" uid="uid://cbfw8ksud0nu" path="res://models/vehicles/Rover_Round.gltf" id="1_hgj13"]
+
+[node name="Rover_Round2" instance=ExtResource("1_hgj13")]

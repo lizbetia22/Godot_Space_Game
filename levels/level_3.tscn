@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpgtdn2dn3m01"]
+
+[ext_resource type="Script" path="res://lib/level_1.gd" id="1_hjo1y"]
+[ext_resource type="PackedScene" uid="uid://dqxnv35w1t0o4" path="res://models/environment/structure/tscn/structure_3.tscn" id="2_2yygi"]
+[ext_resource type="PackedScene" uid="uid://dv5r4ydi3gnxr" path="res://models/environment/plants/tscn/plant_3.tscn" id="3_ap5td"]
+[ext_resource type="PackedScene" uid="uid://xb0c1nxxw5ll" path="res://scenes/teleport.tscn" id="4_8ofo0"]
+[ext_resource type="Script" path="res://lib/spawn_point.gd" id="5_353fg"]
+
+[node name="Level3" type="Node3D"]
+script = ExtResource("1_hjo1y")
+key = "level_3"
+
+[node name="structure_3" parent="." instance=ExtResource("2_2yygi")]
+
+[node name="Plant_32" parent="." instance=ExtResource("3_ap5td")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95592, 3.05927, 9.26934)
+
+[node name="Teleport" parent="." instance=ExtResource("4_8ofo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.10045, 0)
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.8074)
+script = ExtResource("5_353fg")
+
+[node name="SpawnPointDefault" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3047, 0, 0)
+script = ExtResource("5_353fg")

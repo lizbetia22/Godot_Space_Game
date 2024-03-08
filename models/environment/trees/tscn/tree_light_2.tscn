@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkwqd6rpfuplr"]
+
+[ext_resource type="PackedScene" uid="uid://2yxcduyhdl1c" path="res://models/environment/trees/Tree_Light_2.gltf" id="1_bdlqn"]
+
+[node name="Tree_Light_22" instance=ExtResource("1_bdlqn")]

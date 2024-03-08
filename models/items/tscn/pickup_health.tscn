@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbavr8v54546g"]
+
+[ext_resource type="PackedScene" uid="uid://dioy62yhlhwel" path="res://models/items/Pickup_Health.gltf" id="1_lqv85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wnrgo"]
+size = Vector3(0.903168, 0.777649, 1)
+
+[node name="Pickup_Health2" instance=ExtResource("1_lqv85")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Pickup_Health" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickup_Health/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0964028, 0.133114, -0.0327584)
+shape = SubResource("BoxShape3D_wnrgo")

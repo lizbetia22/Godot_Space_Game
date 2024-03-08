@@ -1,0 +1,112 @@
+[gd_scene load_steps=23 format=3 uid="uid://8s4gxre85fjp"]
+
+[ext_resource type="Script" path="res://lib/menu_level.gd" id="1_jmj02"]
+[ext_resource type="PackedScene" uid="uid://dp7o7i5dct4c6" path="res://models/characters/flamingo/flamingo.tscn" id="2_svrn6"]
+[ext_resource type="PackedScene" uid="uid://2lni5goml8sl" path="res://scenes/ui/menu_main/main_menu.tscn" id="3_3ewbo"]
+[ext_resource type="AnimationLibrary" uid="uid://c2cwssjqi5np2" path="res://models/characters/flamingo/flamingo.res" id="4_ua6vh"]
+[ext_resource type="PackedScene" uid="uid://bk5x0v4x4fe8d" path="res://models/characters/frog/frog.tscn" id="5_rvipj"]
+[ext_resource type="AnimationLibrary" uid="uid://cc2rs71jgq7ua" path="res://models/characters/frog/animation.res" id="6_3xabn"]
+[ext_resource type="PackedScene" uid="uid://1leja0dry351" path="res://models/characters/barbara/barbara.tscn" id="7_re05l"]
+[ext_resource type="AnimationLibrary" uid="uid://t2nts5280s4n" path="res://models/characters/barbara/animation.res" id="8_22qrc"]
+[ext_resource type="PackedScene" uid="uid://colfrpnn8dadq" path="res://models/vehicles/tscn/spaceship_finn_the_frog.tscn" id="9_3eohl"]
+[ext_resource type="PackedScene" uid="uid://balcti3y4cqod" path="res://models/vehicles/tscn/spaceship_barbara_the_bee.tscn" id="9_5vvwx"]
+[ext_resource type="PackedScene" uid="uid://csuf6ap6ubs6l" path="res://models/vehicles/tscn/rover_2.tscn" id="9_wye7e"]
+[ext_resource type="PackedScene" uid="uid://0rmv88qy3153" path="res://models/vehicles/tscn/spaceship_fernando_the_flamingo.tscn" id="10_45de3"]
+[ext_resource type="PackedScene" uid="uid://dn6pt37cvs56m" path="res://models/environment/houses/tscn/geodesic_dome.tscn" id="10_dwqwa"]
+[ext_resource type="PackedScene" uid="uid://dfnagq7pe6fe7" path="res://models/environment/building/building.tscn" id="14_fyh2g"]
+[ext_resource type="PackedScene" uid="uid://cnph26p3b4lyy" path="res://models/environment/decor/tscn/solar_panel_roof.tscn" id="15_7rkiy"]
+[ext_resource type="PackedScene" uid="uid://dws2u4g2480gb" path="res://models/environment/trees/tscn/tree_spiral_1.tscn" id="16_fj7by"]
+[ext_resource type="PackedScene" uid="uid://5mla5wcv5dgh" path="res://models/environment/houses/tscn/house_cylinder.tscn" id="18_ktixt"]
+[ext_resource type="PackedScene" uid="uid://b44fvnq6ksuh1" path="res://models/environment/planets/tscn/planet_4.tscn" id="19_go6mv"]
+[ext_resource type="PackedScene" uid="uid://cwo06yfq7gipy" path="res://models/environment/planets/tscn/planet_1.tscn" id="20_4ylko"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oslit"]
+sky_top_color = Color(0.113725, 0, 0.215686, 1)
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_hsfj0"]
+sky_material = SubResource("ProceduralSkyMaterial_oslit")
+
+[sub_resource type="Environment" id="Environment_2n45c"]
+background_mode = 2
+sky = SubResource("Sky_hsfj0")
+tonemap_mode = 2
+
+[node name="MenuLevel" type="Node3D"]
+script = ExtResource("1_jmj02")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2n45c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.996078, 0.945098, 0.952941, 1)
+shadow_enabled = true
+
+[node name="Flamingo" parent="." instance=ExtResource("2_svrn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.973304, -1.41877, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Flamingo"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.69078, 4.56566)
+
+[node name="MainMenu" parent="." instance=ExtResource("3_3ewbo")]
+
+[node name="AnimationFlamingo" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Flamingo")
+libraries = {
+"flamingo": ExtResource("4_ua6vh")
+}
+
+[node name="Frog" parent="." instance=ExtResource("5_rvipj")]
+transform = Transform3D(0.945842, -0.324627, 0, 0.324627, 0.945842, 0, 0, 0, 1, -2.94051, -1.79269, -0.254797)
+
+[node name="AnimationFrog" type="AnimationPlayer" parent="Frog"]
+libraries = {
+"animation": ExtResource("6_3xabn")
+}
+
+[node name="Barbara" parent="." instance=ExtResource("7_re05l")]
+transform = Transform3D(0.934429, 0.351188, -0.0592477, -0.350484, 0.936305, 0.0222225, 0.0632782, 0, 0.997996, 5.40496, -2.2399, -0.315143)
+
+[node name="AnimationBarabara" type="AnimationPlayer" parent="Barbara"]
+libraries = {
+"animation": ExtResource("8_22qrc")
+}
+
+[node name="GeodesicDome2" parent="." instance=ExtResource("10_dwqwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337529, -0.554686, -15.4446)
+
+[node name="Spaceship_BarbaraTheBee2" parent="." instance=ExtResource("9_5vvwx")]
+transform = Transform3D(0.948407, -0.314924, -0.0367051, 0.315226, 0.949013, 0.0025876, 0.0340187, -0.0140245, 0.999323, 6.64325, 12.1055, -28.0061)
+
+[node name="Spaceship_FinnTheFrog2" parent="." instance=ExtResource("9_3eohl")]
+transform = Transform3D(0.883162, -0.468426, 0.0245172, 0.468391, 0.883489, 0.00748639, -0.0251675, 0.00487196, 0.999671, 8.77212, 3.31392, -5.17985)
+
+[node name="Building_L2" parent="." instance=ExtResource("14_fyh2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98133, 0, -27.657)
+
+[node name="SolarPanel_Roof2" parent="." instance=ExtResource("15_7rkiy")]
+transform = Transform3D(0.879804, 0.2074, 0.427703, -0.186527, 0.978256, -0.0906771, -0.43721, 0, 0.89936, 8.45534, -2.38305, -13.055)
+
+[node name="Tree_Spiral_12" parent="." instance=ExtResource("16_fj7by")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11943, -1.58622, -13.3837)
+
+[node name="Spaceship_FernandoTheFlamingo2" parent="." instance=ExtResource("10_45de3")]
+transform = Transform3D(0.99998, -0.00513411, 0.00358767, 0.00625757, 0.794157, -0.607681, 0.000270725, 0.607691, 0.794173, -6.34605, 11.5708, -21.2871)
+
+[node name="Rover_22" parent="." instance=ExtResource("9_wye7e")]
+transform = Transform3D(0.926968, -0.375141, 0, 0.375141, 0.926968, 0, 0, 0, 1, -8.1985, -1.48725, -12.8143)
+
+[node name="House_Cylinder2" parent="." instance=ExtResource("18_ktixt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.378)
+
+[node name="Planet_42" parent="." instance=ExtResource("19_go6mv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71185, 13.3507, -13.5357)
+
+[node name="planet1" parent="." instance=ExtResource("20_4ylko")]
+transform = Transform3D(7.87269, 6.1661, 0, -6.1661, 7.87269, 0, 0, 0, 10, 0.217507, -18.6443, -7.691)
+
+[connection signal="button_continue_pressed" from="MainMenu" to="." method="_on_main_menu_button_continue_pressed"]
+[connection signal="button_exit_pressed" from="MainMenu" to="." method="_on_main_menu_button_exit_pressed"]
+[connection signal="button_new_pressed" from="MainMenu" to="." method="_on_main_menu_button_new_pressed"]

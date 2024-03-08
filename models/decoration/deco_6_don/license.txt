@@ -1,0 +1,11 @@
+Model Information:
+* title:	Macaroni Donut Mini Planet
+* source:	https://sketchfab.com/3d-models/macaroni-donut-mini-planet-8c21383d33ec489e97c43a3ad3b4287c
+* author:	Juleia (https://sketchfab.com/juleia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Macaroni Donut Mini Planet" (https://sketchfab.com/3d-models/macaroni-donut-mini-planet-8c21383d33ec489e97c43a3ad3b4287c) by Juleia (https://sketchfab.com/juleia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

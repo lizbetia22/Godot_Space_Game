@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple Japanese Tree
+* source:	https://sketchfab.com/3d-models/simple-japanese-tree-07073d2c174343ad86b7c53bc30055e0
+* author:	Leonardo Camilo Ribeiro (https://sketchfab.com/leoCamilo)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple Japanese Tree" (https://sketchfab.com/3d-models/simple-japanese-tree-07073d2c174343ad86b7c53bc30055e0) by Leonardo Camilo Ribeiro (https://sketchfab.com/leoCamilo) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

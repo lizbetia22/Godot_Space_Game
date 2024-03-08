@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://colfrpnn8dadq"]
+
+[ext_resource type="PackedScene" uid="uid://d28s5swmasg42" path="res://models/vehicles/Spaceship_RaeTheRedPanda.gltf" id="1_sjm46"]
+
+[node name="Spaceship_FinnTheFrog2" instance=ExtResource("1_sjm46")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b33fun7gv2ltl"]
+
+[ext_resource type="PackedScene" uid="uid://xgc34xolxeej" path="res://models/environment/trees/Tree_Spiral_2.gltf" id="1_xvtpo"]
+
+[node name="Tree_Spiral_22" instance=ExtResource("1_xvtpo")]

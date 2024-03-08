@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgfxicre11tgw"]
+
+[ext_resource type="PackedScene" uid="uid://nplp1rckholr" path="res://models/items/Pickup_Thunder.gltf" id="1_sgy25"]
+
+[node name="Pickup_Thunder2" instance=ExtResource("1_sgy25")]

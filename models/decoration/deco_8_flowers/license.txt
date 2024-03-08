@@ -1,0 +1,11 @@
+Model Information:
+* title:	Alien World Explorer
+* source:	https://sketchfab.com/3d-models/alien-world-explorer-f73af15ccc2849098df32f48133cba9b
+* author:	Sharon Kunne (https://sketchfab.com/sharonkunne)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Alien World Explorer" (https://sketchfab.com/3d-models/alien-world-explorer-f73af15ccc2849098df32f48133cba9b) by Sharon Kunne (https://sketchfab.com/sharonkunne) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

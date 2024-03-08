@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp7o7i5dct4c6"]
+
+[ext_resource type="PackedScene" uid="uid://228rb14fy1p3" path="res://models/characters/flamingo/Flamingo.gltf" id="1_kb6h7"]
+[ext_resource type="AnimationLibrary" uid="uid://c2cwssjqi5np2" path="res://models/characters/flamingo/flamingo.res" id="2_1qi2u"]
+
+[node name="Flamingo" instance=ExtResource("1_kb6h7")]
+
+[node name="Skeleton3D" parent="CharacterArmature" index="0"]
+bones/1/position = Vector3(0.35192, 0.0727973, -0.457257)
+bones/1/rotation = Quaternion(6.15994e-06, 0.685426, 0.728142, 1.44523e-05)
+bones/2/position = Vector3(0.00345634, 0.820286, 0.247078)
+bones/2/rotation = Quaternion(-0.000513423, 0.00269969, 2.46359e-05, 0.999996)
+bones/4/rotation = Quaternion(0.0746338, 4.36782e-07, 4.61262e-08, 0.997211)
+bones/5/rotation = Quaternion(-0.00273367, -0.0766443, 0.0507299, 0.995763)
+bones/6/rotation = Quaternion(-0.000333848, 2.012e-05, 0.000140493, 1)
+bones/7/rotation = Quaternion(0.100523, -0.000274436, -2.75825e-05, 0.994935)
+bones/8/position = Vector3(0.178885, 0.257786, 0.100595)
+bones/8/rotation = Quaternion(-0.0317881, -0.0142842, -0.409659, 0.911573)
+bones/9/rotation = Quaternion(0.0956322, 0.299927, 0.705479, -0.634979)
+bones/10/rotation = Quaternion(0.142194, 0.196994, -0.25214, 0.936696)
+bones/15/rotation = Quaternion(-0.112771, 0.000769937, 0.014515, 0.993515)
+bones/19/rotation = Quaternion(-0.0766122, -0.00152705, -0.0198675, 0.996862)
+bones/20/rotation = Quaternion(-0.0137146, -0.0297074, -0.677202, 0.735069)
+bones/22/position = Vector3(-0.178814, 0.2577, 0.100535)
+bones/22/rotation = Quaternion(-0.0317879, 0.0142848, 0.409659, 0.911573)
+bones/23/rotation = Quaternion(0.329588, 0.247798, -0.666948, -0.620603)
+bones/24/rotation = Quaternion(0.0949146, 0.0100093, 0.117281, 0.988502)
+bones/26/rotation = Quaternion(-0.352085, 0.0399518, 0.261516, 0.897803)
+bones/27/rotation = Quaternion(-0.624876, -0.0621056, -0.0610276, 0.775853)
+bones/29/rotation = Quaternion(-0.510454, -0.0201786, 0.0861193, 0.855344)
+bones/30/rotation = Quaternion(-0.527099, -0.0349146, 0.0715488, 0.846066)
+bones/33/rotation = Quaternion(-0.373965, -0.0142687, -0.143299, 0.916194)
+bones/34/rotation = Quaternion(-0.636407, -0.0269335, 0.160936, 0.753897)
+bones/35/rotation = Quaternion(-0.0137146, 0.0297073, 0.677202, 0.735069)
+bones/36/rotation = Quaternion(-0.685943, -0.169033, -0.270985, 0.653817)
+bones/37/position = Vector3(0.339524, 0.00117963, -0.151615)
+bones/37/rotation = Quaternion(0.964236, 0.0128031, 0.0013253, -0.264732)
+bones/38/rotation = Quaternion(0.0926739, 0.00198467, 0.0104094, 0.99564)
+bones/39/position = Vector3(-0.341207, 0.00117969, -0.151615)
+bones/39/rotation = Quaternion(0.876563, -0.0121439, 0.00114861, 0.481132)
+bones/40/rotation = Quaternion(0.319288, -0.00432671, -0.00967346, 0.947598)
+bones/42/position = Vector3(-0.349298, 0.114035, 0.626263)
+bones/42/rotation = Quaternion(-1.194e-05, 0.879467, 0.47596, -1.08403e-05)
+
+[node name="Pistol" parent="CharacterArmature/Skeleton3D" index="0"]
+transform = Transform3D(0.852926, 0.485343, -0.192246, 0.165745, -0.600984, -0.781887, -0.49502, 0.635028, -0.593038, -0.493377, 0.597413, -1.25928)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": ExtResource("2_1qi2u")
+}

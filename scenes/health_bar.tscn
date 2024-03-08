@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2g1gfyc8r4j5"]
+
+[ext_resource type="FontFile" uid="uid://ct7q2x77xsmbu" path="res://assets/fonts/space-games-font/SpaceGames-K7zKD.otf" id="1_n64ye"]
+[ext_resource type="Script" path="res://lib/health_bar.gd" id="2_3ew0i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huncg"]
+bg_color = Color(0.513726, 0, 0.741176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7aic"]
+bg_color = Color(0.505882, 0, 0.72549, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3torc"]
+bg_color = Color(0.658824, 0.462745, 0.992157, 1)
+
+[node name="HealthBar" type="ProgressBar"]
+z_index = 1
+offset_right = 240.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("1_n64ye")
+theme_override_styles/background = SubResource("StyleBoxFlat_huncg")
+show_percentage = false
+script = ExtResource("2_3ew0i")
+
+[node name="DamageBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_n64ye")
+theme_override_styles/background = SubResource("StyleBoxFlat_u7aic")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3torc")
+step = 10.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

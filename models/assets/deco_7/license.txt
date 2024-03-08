@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star Command
+* source:	https://sketchfab.com/3d-models/star-command-4a73376597cb4f698adb854da063d599
+* author:	JCastle (https://sketchfab.com/Thattcher)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star Command" (https://sketchfab.com/3d-models/star-command-4a73376597cb4f698adb854da063d599) by JCastle (https://sketchfab.com/Thattcher) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

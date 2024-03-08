@@ -1,0 +1,11 @@
+Model Information:
+* title:	Space McDonalds Motel FuelStation
+* source:	https://sketchfab.com/3d-models/space-mcdonalds-motel-fuelstation-acc95174ba6f4edca0fb15378fb63e1f
+* author:	shakiller (https://sketchfab.com/shakiller)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Space McDonalds Motel FuelStation" (https://sketchfab.com/3d-models/space-mcdonalds-motel-fuelstation-acc95174ba6f4edca0fb15378fb63e1f) by shakiller (https://sketchfab.com/shakiller) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
